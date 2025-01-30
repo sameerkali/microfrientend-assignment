@@ -1,5 +1,5 @@
 {
-  "name": "microfrontend",
+  "name": "host",
   "version": "1.0.0",
   "description": "microfrontend",
   "main": "index.js",
