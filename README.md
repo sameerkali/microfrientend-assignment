@@ -1,6 +1,7 @@
 # Microfrontend assignment for BlueBash
 
-<p style="color: red; text-decoration: underline;">Is This Visible.</p>
+<span style="color: red; text-decoration: underline;">This is an important paragraph with red and underlined text.</span>
+
 
 
 This is a **Microfrontend (MFE) assignment Application** using **Webpack Module Federation**. The application is divided into different micro frontends, each responsible for a specific feature, and integrated into a shell/container application.
