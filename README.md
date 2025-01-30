@@ -1,6 +1,6 @@
-# Microfrontend Demo Application
+# Microfrontend assignment for BlueBash
 
-This is a **Microfrontend (MFE) Demo Application** using **Webpack Module Federation**. The application is divided into different micro frontends, each responsible for a specific feature, and integrated into a shell/container application.
+This is a **Microfrontend (MFE) assignment Application** using **Webpack Module Federation**. The application is divided into different micro frontends, each responsible for a specific feature, and integrated into a shell/container application.
 
 ## Features
 - Uses **Webpack Module Federation** for dynamic module sharing.
@@ -11,7 +11,7 @@ This is a **Microfrontend (MFE) Demo Application** using **Webpack Module Federa
 
 ## Project Structure
 ```
-/microfrontend-demo
+/microfrontend-assignment
   ├── /container-app       # Main Shell Application
   ├── /chat-app            # Microfrontend - Chat App
   ├── /email-app           # Microfrontend - Email App
@@ -29,8 +29,8 @@ Ensure you have the following installed:
 
 ### 2. Clone the Repository
 ```sh
-git clone https://github.com/your-repo/microfrontend-demo.git
-cd microfrontend-demo
+git clone https://github.com/your-repo/microfrontend-assignment.git
+cd microfrontend-assignment
 ```
 
 ### 3. Install Dependencies
