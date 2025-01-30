@@ -1,0 +1,16 @@
+{
+  "name": "micro-frontend-monorepo",
+  "private": true,
+  "workspaces": [
+    "host",
+    "chat-app",
+    "email-app"
+  ],
+  "scripts": {
+    "start": "concurrently --kill-others-on-fail \"npm run start -w MFApp\" \"npm run start -w chat-app\" \"npm run start -w email-app\"",
+    "build": "npm run build -w MFApp && npm run build -w chat-app && npm run build -w email-app"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+}

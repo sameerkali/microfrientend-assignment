@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.email-container {
+  width: 100%;
+  max-width: 900px;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.email-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.email-header h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.compose-button {
+  background: #007bff;
+  color: white;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.compose-button:hover {
+  background: #0056b3;
+}
+
+.email-list {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.no-emails {
+  text-align: center;
+  color: gray;
+  font-size: 16px;
+}
+
+.email-item {
+  width: 100%;
+  background: white;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  padding-right: 5rem;
+  padding-left: 5rem;
+}
+
+.email-item:hover {
+  background: #f1f1f1;
+}
+
+.email-item p {
+  margin: 5px 0;
+}
+
+.email-preview {
+  color: gray;
+  font-size: 14px;
+}
+
+.email-date {
+  font-size: 12px;
+  color: gray;
+  margin-top: 5px;
+  text-align: right;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-content h3 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.modal-content textarea {
+  height: 120px;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.modal-actions button {
+  padding: 10px 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: 0.3s ease;
+}
+
+.cancel {
+  background: #dc3545;
+  color: white;
+}
+
+.cancel:hover {
+  background: #b02a37;
+}
+
+.modal-actions button:not(.cancel) {
+  background: #007bff;
+  color: white;
+}
+
+.modal-actions button:not(.cancel):hover {
+  background: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .email-container {
+    width: 95%;
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
+
+  .email-header h2 {
+    font-size: 20px;
+  }
+
+  .compose-button {
+    font-size: 14px;
+  }
+
+  .email-item {
+    font-size: 14px;
+  }
+
+  .modal-actions button {
+    font-size: 14px;
+  }
+}
