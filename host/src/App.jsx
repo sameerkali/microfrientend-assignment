@@ -1,20 +1,21 @@
-import React, { useState, useEffect, lazy, Suspense} from "react";
-import Header from "./components/Header.jsx";
-import Footer from "./components/Footer.jsx";
-import FoodList from "./components/FoodList.jsx";
-import ProductList from "./components/ProductList.jsx";
-
+import React from "react";
+import ChatApp from "./components/ChatApp.jsx";
+import EmailApp from "./components/EmailApp.jsx";
 import "./style.css";
 
 const App = () => {
   return (
-    <>
-      <Header />
-      <FoodList />
-      <ProductList />
-      <Footer />
-    </>
-  )
-}
+    <div className="app-container">
+      <div className="content">
+        <div className="section">
+          <ChatApp />
+        </div>
+        <div className="section">
+          <EmailApp />
+        </div>
+      </div>
+    </div>
+  );
+};
 
 export default App;

@@ -7,8 +7,9 @@
     "email-app"
   ],
   "scripts": {
-    "start": "concurrently --kill-others-on-fail \"npm run start -w MFApp\" \"npm run start -w chat-app\" \"npm run start -w email-app\"",
-    "build": "npm run build -w MFApp && npm run build -w chat-app && npm run build -w email-app"
+    "start": "concurrently --kill-others-on-fail \"npm run start -w host\" \"npm run start -w chat-app\" \"npm run start -w email-app\"",
+    "install": "npm install --prefix host && npm install --prefix chat-app && npm install --prefix email-app",
+    "build": "npm run build -w host && npm run build -w chat-app && npm run build -w email-app"
   },
   "devDependencies": {
     "concurrently": "^8.0.1"
