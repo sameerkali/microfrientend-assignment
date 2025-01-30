@@ -5,13 +5,19 @@
   font-family: Arial, sans-serif;
 }
 
+/* Remove the centering from body */
 body {
   background: #f4f4f4;
+  min-height: 100vh;
+}
+
+/* Add a wrapper for the email component */
+.email-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   padding: 20px;
+  width: 100%;
 }
 
 .email-container {
@@ -26,6 +32,7 @@ body {
   align-items: center;
 }
 
+/* Rest of your CSS remains the same */
 .email-header {
   width: 100%;
   display: flex;
@@ -78,9 +85,9 @@ body {
   font-size: 16px;
   display: flex;
   flex-direction: column;
-  padding-right: 5rem;
-  padding-left: 5rem;
 }
+
+/* Rest of the styles remain the same */
 
 .email-item:hover {
   background: #f1f1f1;

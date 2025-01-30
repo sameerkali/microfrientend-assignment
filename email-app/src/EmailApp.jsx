@@ -60,7 +60,7 @@ const EmailApp = () => {
         <div className="modal">
           <div className="modal-content">
             <h3>Email Preview</h3>
-            <p><strong>From:</strong> you@email.com</p>
+            <p><strong>From:</strong> work.sameerfaridi@gmail.com</p>
             <p><strong>To:</strong> {selectedEmail.to}</p>
             <p><strong>Subject:</strong> {selectedEmail.subject}</p>
             <p className="email-date">{selectedEmail.date}</p>
