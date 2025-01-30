@@ -1,5 +1,6 @@
 import React, {lazy, Suspense} from "react";
 const EmailAppComp = lazy(() => import("EmailApp/EmailApp"));
+import '../style.css'
 
 const EmailApp = () => {
     return (
