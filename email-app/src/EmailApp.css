@@ -1,3 +1,14 @@
+:root {
+  --primary-color: #2563eb;
+  --primary-hover: #1d4ed8;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --background-light: #f8fafc;
+  --white: #ffffff;
+  --max-width: 1280px;
+  --header-height: 64px;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,13 +16,11 @@
   font-family: Arial, sans-serif;
 }
 
-/* Remove the centering from body */
 body {
-  background: #f4f4f4;
+  background: var(--background-light);
   min-height: 100vh;
 }
 
-/* Add a wrapper for the email component */
 .email-wrapper {
   display: flex;
   justify-content: center;
@@ -23,7 +32,7 @@ body {
 .email-container {
   width: 100%;
   max-width: 900px;
-  background: white;
+  background: var(--white);
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 20px;
@@ -32,13 +41,12 @@ body {
   align-items: center;
 }
 
-/* Rest of your CSS remains the same */
 .email-header {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 2px solid #ddd;
+  border-bottom: 2px solid var(--text-secondary);
   padding-bottom: 10px;
 }
 
@@ -48,8 +56,8 @@ body {
 }
 
 .compose-button {
-  background: #007bff;
-  color: white;
+  background: var(--primary-color);
+  color: var(--white);
   padding: 10px 14px;
   border: none;
   border-radius: 5px;
@@ -59,7 +67,7 @@ body {
 }
 
 .compose-button:hover {
-  background: #0056b3;
+  background: var(--primary-hover);
 }
 
 .email-list {
@@ -69,13 +77,13 @@ body {
 
 .no-emails {
   text-align: center;
-  color: gray;
+  color: var(--text-secondary);
   font-size: 16px;
 }
 
 .email-item {
   width: 100%;
-  background: white;
+  background: var(--white);
   padding: 12px;
   margin-bottom: 8px;
   border-radius: 5px;
@@ -87,8 +95,6 @@ body {
   flex-direction: column;
 }
 
-/* Rest of the styles remain the same */
-
 .email-item:hover {
   background: #f1f1f1;
 }
@@ -98,13 +104,13 @@ body {
 }
 
 .email-preview {
-  color: gray;
+  color: var(--text-secondary);
   font-size: 14px;
 }
 
 .email-date {
   font-size: 12px;
-  color: gray;
+  color: var(--text-secondary);
   margin-top: 5px;
   text-align: right;
 }
@@ -123,7 +129,7 @@ body {
 }
 
 .modal-content {
-  background: white;
+  background: var(--white);
   padding: 20px;
   width: 100%;
   max-width: 500px;
@@ -143,7 +149,7 @@ body {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--text-secondary);
   border-radius: 5px;
   font-size: 16px;
 }
@@ -169,7 +175,7 @@ body {
 
 .cancel {
   background: #dc3545;
-  color: white;
+  color: var(--white);
 }
 
 .cancel:hover {
@@ -177,12 +183,12 @@ body {
 }
 
 .modal-actions button:not(.cancel) {
-  background: #007bff;
-  color: white;
+  background: var(--primary-color);
+  color: var(--white);
 }
 
 .modal-actions button:not(.cancel):hover {
-  background: #0056b3;
+  background: var(--primary-hover);
 }
 
 @media (max-width: 768px) {
