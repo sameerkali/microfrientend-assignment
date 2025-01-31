@@ -14,8 +14,11 @@ const ChatApp = () => {
         {
           text: input,
           sender: user,
-          timestamp: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }) // No AM/PM, No seconds
-        }
+          timestamp: new Date().toLocaleTimeString([], {
+            hour: "2-digit",
+            minute: "2-digit",
+          }),
+        },
       ]);
       setInput("");
     }
@@ -27,7 +30,6 @@ const ChatApp = () => {
 
   return (
     <div className="chat-container">
-      {/* Header Section */}
       <div className="chat-header">
         <h2>Chat with {user === "Sameer" ? "Devender" : "Sameer"}</h2>
         <button onClick={() => setUser(user === "Sameer" ? "Devender" : "Sameer")}>
@@ -35,7 +37,6 @@ const ChatApp = () => {
         </button>
       </div>
 
-      {/* Chat Messages */}
       <div className="chat-body" ref={chatBodyRef}>
         {messages.map((msg, index) => (
           <div key={index} className={`message ${msg.sender === user ? "sent" : "received"}`}>
@@ -46,7 +47,6 @@ const ChatApp = () => {
         ))}
       </div>
 
-      {/* Input Section */}
       <div className="chat-footer">
         <input
           type="text"
@@ -60,4 +60,4 @@ const ChatApp = () => {
   );
 };
 
-export default ChatApp;
+export default ChatApp; 
