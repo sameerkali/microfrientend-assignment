@@ -9,16 +9,15 @@ This is a **Microfrontend (MFE) assignment Application** using **Webpack Module 
 ## Features
 - Uses **Webpack Module Federation** for dynamic module sharing.
 - Microfrontends include **Chat App** and **Email App**.
-- Seamless integration of independently developed applications.
-- Modern UI with responsive design.
 - Lazy loading using **React Suspense**.
 
 ## Project Structure
 ```
 /microfrontend-assignment
-  ├── /container-app       # Main Shell Application
-  ├── /chat-app            # Microfrontend - Chat App
-  ├── /email-app           # Microfrontend - Email App
+  ├── /host        # Host
+  ├── /chat-app    # Microfrontend 
+  ├── /email-app   # Microfrontend
+  |         
   ├── package.json
   ├── README.md
   ├── webpack.config.js
@@ -82,11 +81,6 @@ new ModuleFederationPlugin({
 3. Lazy loading ensures smooth performance using React Suspense.
 4. Module Federation handles cross-app imports without code duplication.
 
-## Styling
-All Microfrontends use a shared **CSS file** to maintain a consistent UI:
-- `style.css` (global styles)
-- Components are styled for responsiveness.
-
 ## Credits
-Developed by **[Sameer Faridi]** | For a amazing assignment given by Bluebash.
+Developed by **@sameerkali** | For a amazing assignment given by Bluebash.
 
