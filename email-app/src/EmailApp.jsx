@@ -6,6 +6,18 @@ const EmailApp = () => {
   const [showCompose, setShowCompose] = useState(false);
   const [selectedEmail, setSelectedEmail] = useState(null);
   const [form, setForm] = useState({ to: "", subject: "", body: "" });
+  const [headerColor, setHeaderColor] = useState("#2563eb"); // Default color
+
+  const changeHeaderColor = () => {
+    const newColor = headerColor === "#2563eb" ? "#d97706" : "#2563eb";
+    setHeaderColor(newColor);
+
+    const event = new CustomEvent("changeHeaderColor", {
+      detail: { color: newColor }
+    });
+
+    window.dispatchEvent(event);
+  };
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -13,7 +25,10 @@ const EmailApp = () => {
 
   const sendEmail = () => {
     if (form.to && form.subject && form.body) {
-      setEmails([{ ...form, id: Date.now(), date: new Date().toLocaleString() }, ...emails]);
+      setEmails([
+        { ...form, id: Date.now(), date: new Date().toLocaleString() },
+        ...emails
+      ]);
       setForm({ to: "", subject: "", body: "" });
       setShowCompose(false);
     }
@@ -22,18 +37,34 @@ const EmailApp = () => {
   return (
     <div className="email-container">
       <div className="email-header">
+        <button className="compose-button" onClick={changeHeaderColor}>
+          Change Header Color
+        </button>
+
         <h2>Email</h2>
-        <button className="compose-button" onClick={() => setShowCompose(true)}>Compose</button>
+        <button className="compose-button" onClick={() => setShowCompose(true)}>
+          Compose
+        </button>
       </div>
 
       <div className="email-list">
         {emails.length === 0 ? (
-          <p className="no-emails">No emails yet. Click "Compose" to create a new email.</p>
+          <p className="no-emails">
+            No emails yet. Click "Compose" to create a new email.
+          </p>
         ) : (
           emails.map((email) => (
-            <div key={email.id} className="email-item" onClick={() => setSelectedEmail(email)}>
-              <p><strong>To:</strong> {email.to}</p>
-              <p><strong>Subject:</strong> {email.subject}</p>
+            <div
+              key={email.id}
+              className="email-item"
+              onClick={() => setSelectedEmail(email)}
+            >
+              <p>
+                <strong>To:</strong> {email.to}
+              </p>
+              <p>
+                <strong>Subject:</strong> {email.subject}
+              </p>
               <p className="email-preview">{email.body}</p>
               <p className="email-date">{email.date}</p>
             </div>
@@ -45,11 +76,30 @@ const EmailApp = () => {
         <div className="modal">
           <div className="modal-content">
             <h3>Compose Email</h3>
-            <input type="email" name="to" placeholder="Recipient Email" value={form.to} onChange={handleChange} />
-            <input type="text" name="subject" placeholder="Subject" value={form.subject} onChange={handleChange} />
-            <textarea name="body" placeholder="Type your message..." value={form.body} onChange={handleChange}></textarea>
+            <input
+              type="email"
+              name="to"
+              placeholder="Recipient Email"
+              value={form.to}
+              onChange={handleChange}
+            />
+            <input
+              type="text"
+              name="subject"
+              placeholder="Subject"
+              value={form.subject}
+              onChange={handleChange}
+            />
+            <textarea
+              name="body"
+              placeholder="Type your message..."
+              value={form.body}
+              onChange={handleChange}
+            ></textarea>
             <div className="modal-actions">
-              <button className="cancel" onClick={() => setShowCompose(false)}>Cancel</button>
+              <button className="cancel" onClick={() => setShowCompose(false)}>
+                Cancel
+              </button>
               <button onClick={sendEmail}>Send</button>
             </div>
           </div>
@@ -60,13 +110,21 @@ const EmailApp = () => {
         <div className="modal">
           <div className="modal-content">
             <h3>Email Preview</h3>
-            <p><strong>From:</strong> work.sameerfaridi@gmail.com</p>
-            <p><strong>To:</strong> {selectedEmail.to}</p>
-            <p><strong>Subject:</strong> {selectedEmail.subject}</p>
+            <p>
+              <strong>From:</strong> work.sameerfaridi@gmail.com
+            </p>
+            <p>
+              <strong>To:</strong> {selectedEmail.to}
+            </p>
+            <p>
+              <strong>Subject:</strong> {selectedEmail.subject}
+            </p>
             <p className="email-date">{selectedEmail.date}</p>
             <p className="email-body">{selectedEmail.body}</p>
             <div className="modal-actions">
-              <button className="cancel" onClick={() => setSelectedEmail(null)}>Close</button>
+              <button className="cancel" onClick={() => setSelectedEmail(null)}>
+                Close
+              </button>
             </div>
           </div>
         </div>
