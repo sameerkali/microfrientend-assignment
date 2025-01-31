@@ -1,0 +1,24 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "host/webpack.config.js",
+        "use": "@vercel/static-build",
+        "config": { "distDir": "host/dist" }
+      },
+      {
+        "src": "chat-app/webpack.config.js",
+        "use": "@vercel/static-build",
+        "config": { "distDir": "chat-app/dist" }
+      },
+      {
+        "src": "email-app/webpack.config.js",
+        "use": "@vercel/static-build",
+        "config": { "distDir": "email-app/dist" }
+      }
+    ],
+    "routes": [
+      { "src": "/(.*)", "dest": "/host/$1" }
+    ]
+  }
+  
