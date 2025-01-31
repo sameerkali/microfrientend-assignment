@@ -1,11 +1,7 @@
 
-
-/* ////////////////////////// */
-
-/* styles.css */
 :root {
-  --primary-color: #2563eb;
-  --primary-hover: #1d4ed8;
+  --primary-color: #429BD5;
+  --primary-hover: #2296e4;
   --text-primary: #1f2937;
   --text-secondary: #4b5563;
   --background-light: #f8fafc;
@@ -27,7 +23,6 @@ body {
   line-height: 1.5;
 }
 
-/* Header Styles */
 .header {
   position: fixed;
   top: 0;
@@ -50,9 +45,9 @@ body {
 }
 
 .logo img {
-  width: 12rem; /* Adjust as needed */
-  height: auto; /* Maintains aspect ratio */
-  max-width: 100%; /* Ensures responsiveness */
+  width: 12rem; 
+  height: auto;
+  max-width: 100%;
 }
 
 .nav-buttons {
@@ -223,6 +218,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 3rem 0rem;
 }
 
 

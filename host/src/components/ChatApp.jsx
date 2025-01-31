@@ -1,6 +1,6 @@
 import React, { useState, useEffect, lazy, Suspense } from "react";
-import '../style.css'
 const ChatAppComp = lazy(() => import("ChatApp/ChatApp"));
+import '../style.css'
 
 const ChatApp = () => {
 
