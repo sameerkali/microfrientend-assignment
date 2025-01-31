@@ -3,6 +3,9 @@
 
 This is a **Microfrontend (MFE) assignment Application** using **Webpack Module Federation**. The application is divided into different micro frontends, each responsible for a specific feature, and integrated into a shell/container application.
 
+![Alt Text](./host/public/hero-MFA.png)
+
+
 ## Features
 - Uses **Webpack Module Federation** for dynamic module sharing.
 - Microfrontends include **Chat App** and **Email App**.
